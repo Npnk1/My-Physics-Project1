@@ -1,0 +1,49 @@
+# This .gitignore is compatible with Unity projects
+
+# ======= Operating System =======
+.DS_Store
+Thumbs.db
+
+# ======= Unity generated folders =======
+Library/
+Temp/
+Obj/
+Build/
+Builds/
+Logs/
+MemoryCaptures/
+
+# ======= Unity Cache =======
+UserSettings/
+UnityGenerated/
+UnityPackageManager/
+
+# ======= Visual Studio / JetBrains =======
+.vs/
+.idea/
+*.csproj
+*.sln
+*.pidb
+*.user
+*.booproj
+*.svd
+
+# ======= Backup files =======
+*.orig
+*.tmp
+
+# ======= Crash reports =======
+sysinfo.txt
+
+# ======= TextMesh Pro =======
+*.meta
+*.asset
+
+# ======= Gradle / Android =======
+.gradle/
+*.apk
+*.aab
+*.keystore
+
+# ======= Other =======
+/*.unitypackage
