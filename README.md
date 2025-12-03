@@ -71,3 +71,27 @@ Wat heb ik geleerd:
  .gitignore toegevoegd
  commit & push van vandaag
  link ingeleverd in Simulise
+
+
+
+
+
+
+ Week 2 – Forces & Collisions
+  Wat werkt nu:
+
+✔ Bal met Rigidbody2D
+✔ AddForce om de bal af te schieten
+✔ Targets met Collider2D
+✔ Botsing detectie met OnCollisionEnter2D
+✔ "Hit!" in de Console
+
+🎥 Demo GIF
+![alt text](<../OneDrive/Рабочий стол/M2-skill-opdracht/ball_shoot.gif>)
+
+ Reflectie – Week 2
+
+Deze week heb ik geleerd hoe AddForce werkt en waarom je dit gebruikt in plaats van een Transform verplaatsen.
+Ik heb een bal gemaakt met Rigidbody2D en physics-material voor bounciness.
+Ook heb ik targets toegevoegd en collisions getest met OnCollisionEnter2D.
+Het kostte wat testen om de juiste kracht en richting te vinden, maar nu werkt het goed.
