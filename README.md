@@ -108,7 +108,89 @@ In this step I implemented an aiming and shooting system similar to Peggle.
 - Releasing the mouse button shoots the ball using AddForce.
 - The ball interacts with physics and collides with targets.
 
-### Demo
+### Demo🎯 3.1 Peggle – Hits & Score
+Beschrijving
+
+In deze opdracht heb ik de basis van een Peggle-mechanic gebouwd.
+De bal wordt afgevuurd vanuit een kanon en kan Peggles raken.
+Elke Peggle houdt bij hoeveel hits hij kan hebben, geeft punten bij elke hit en verdwijnt wanneer het maximum aantal hits is bereikt.
+
+Gameplay mechanic
+
+De speler schiet een bal af vanuit het kanon.
+
+Wanneer de bal een Peggle raakt:
+
+gaat het aantal resterende hits omlaag
+
+wordt de score verhoogd
+
+Zodra een Peggle geen hits meer over heeft, verdwijnt hij uit het level.
+
+Peggle instellingen
+
+Elke Peggle heeft eigen instellingen die via de Inspector aangepast kunnen worden:
+
+Hits to destroy – hoeveel keer de Peggle geraakt kan worden
+
+Points per hit – hoeveel punten één hit oplevert
+
+Hierdoor is het mogelijk om verschillende soorten Peggles te maken zonder extra scripts.
+
+Score systeem
+
+De score wordt centraal bijgehouden in de ScoreManager.
+Elke Peggle roept bij een hit AddScore() aan op de ScoreManager.
+Op deze manier blijft het puntensysteem overzichtelijk en uitbreidbaar.
+
+Technische uitleg
+
+De Peggle gebruikt een Collider2D zonder Rigidbody.
+
+De bal heeft een Rigidbody2D, zodat collisions worden geregistreerd.
+
+Bij een collision wordt OnCollisionEnter2D() gebruikt om:
+
+hits af te tellen
+
+punten toe te voegen
+
+de Peggle te verwijderen wanneer deze “op” is
+
+Resultaat (GIF)
+
+![Запись 2025-12-14 185332](https://github.com/user-attachments/assets/056cc621-8072-4bff-b589-c7791c4de341)
+
+
+de bal die een Peggle raakt
+
+de score die oploopt
+
+de Peggle die verdwijnt
+
+Reflectie
+
+Wat heb ik gemaakt:
+Ik heb een Peggle-mechanic gemaakt die reageert op hits, punten geeft en verdwijnt na een ingesteld aantal hits.
+
+Hoe heb ik dit aangepakt:
+Ik heb één Peggle-script gemaakt waarin zowel hit-registratie als score-verwerking zit. De score wordt afgehandeld door een aparte ScoreManager.
+
+Waar liep ik tegenaan:
+Ik had in het begin meerdere scripts voor dezelfde logica, wat errors veroorzaakte. Door alles in één Peggle-script te zetten werkte de mechanic correct.
+
+Wat heb ik geleerd:
+Ik heb geleerd hoe collisions werken in Unity 2D, hoe objecten met elkaar communiceren via scripts en hoe een centrale ScoreManager gebruikt kan worden.
+
+✔ Checklist
+
+Peggles reageren op hits
+
+Score loopt correct op
+
+Peggles verdwijnen na het juiste aantal hits
+
+GIF toegevoegd aan README
 ![Aim and Shoot](ball_shoot.gif)
 
 ### Code
