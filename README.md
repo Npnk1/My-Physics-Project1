@@ -197,3 +197,18 @@ GIF toegevoegd aan README
 - Aim.cs
 - ShootBall.cs
 
+
+
+
+
+
+## 3.2 Combo System & Bumpers
+
+![gif]![Запись 2025-12-16 123208](https://github.com/user-attachments/assets/76369e58-0d07-4b11-8a3c-cdc3322bec49)
+
+
+Bumpers hebben tags. 
+Bij het raken van meerdere bumpers met dezelfde tag stijgt de multiplier.
+De score wordt vermenigvuldigd met de combo multiplier.
+
+
